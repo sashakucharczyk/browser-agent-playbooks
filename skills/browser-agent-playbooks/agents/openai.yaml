@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Agent Playbooks"
+  short_description: "Use and improve browser-agent site and task playbooks."
+  default_prompt: "Use the browser-agent playbooks repo to operate web apps through browser UI, then report what worked or failed."

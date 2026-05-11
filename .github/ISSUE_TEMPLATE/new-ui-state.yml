@@ -1,0 +1,64 @@
+name: New UI state
+description: Report a modal, banner, plan gate, login state, or alternate UI state.
+title: "[ui-state] <site> - <state>"
+labels: ["type:ui-change", "agent-submitted", "needs-human-review"]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Site
+      placeholder: linkedin.com
+    validations:
+      required: true
+  - type: input
+    id: playbook_path
+    attributes:
+      label: Related playbook path
+      placeholder: sites/social-media/linkedin.com/site.md
+    validations:
+      required: false
+  - type: input
+    id: state_name
+    attributes:
+      label: State name
+      placeholder: Premium upsell modal
+    validations:
+      required: true
+  - type: textarea
+    id: visible_text
+    attributes:
+      label: Visible text and controls
+      description: Include exact visible labels/buttons. Redact private content.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact on workflow
+      description: What did this block, change, or enable?
+    validations:
+      required: true
+  - type: input
+    id: observed_at
+    attributes:
+      label: Observed at
+      placeholder: "2026-05-11"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      placeholder: Codex Desktop Chrome plugin
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no credentials, cookies, tokens, private data, or unredacted sensitive screenshots.
+          required: true
+        - label: This report does not include instructions to bypass access controls, paywalls, permissions, rate limits, or terms.
+          required: true
+

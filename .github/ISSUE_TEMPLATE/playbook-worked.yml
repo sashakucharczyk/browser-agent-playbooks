@@ -1,0 +1,72 @@
+name: Playbook worked
+description: Report a successful browser-agent run with evidence.
+title: "[worked] <site> - <workflow>"
+labels: ["type:worked", "agent-submitted"]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Site
+      placeholder: claude.ai
+    validations:
+      required: true
+  - type: input
+    id: playbook_path
+    attributes:
+      label: Playbook path
+      placeholder: sites/llms/claude.ai/site.md
+    validations:
+      required: true
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow
+      placeholder: send_prompt_and_read_reply
+    validations:
+      required: true
+  - type: input
+    id: verified_at
+    attributes:
+      label: Verified at
+      placeholder: "2026-05-11"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      placeholder: Codex Desktop Chrome plugin
+    validations:
+      required: true
+  - type: textarea
+    id: anchors
+    attributes:
+      label: UI anchors observed
+      description: List exact roles, labels, headings, URLs, or visible text used.
+      placeholder: "- textbox: Write your prompt to Claude\n- button: Send message"
+    validations:
+      required: true
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion signals
+      placeholder: "- Claude finished the response"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Account and UI context
+      description: Include plan, language, region, viewport, signed-in state, and anything that may affect generality.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no credentials, cookies, tokens, private data, or unredacted sensitive screenshots.
+          required: true
+        - label: This report does not include instructions to bypass access controls, paywalls, permissions, rate limits, or terms.
+          required: true
+

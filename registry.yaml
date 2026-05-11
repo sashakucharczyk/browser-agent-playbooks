@@ -1,0 +1,34 @@
+sites:
+  - domain: claude.ai
+    category: llms
+    playbook: sites/llms/claude.ai/site.md
+    last_verified: 2026-05-11
+    evidence_level: tested
+  - domain: gemini.google.com
+    category: llms
+    playbook: sites/llms/gemini.google.com/site.md
+    last_verified: 2026-05-11
+    evidence_level: observed
+  - domain: chatgpt.com
+    category: llms
+    playbook: sites/llms/chatgpt.com/site.md
+    last_verified: 2026-05-11
+    evidence_level: observed
+  - domain: linkedin.com
+    category: social-media
+    playbook: sites/social-media/linkedin.com/site.md
+    last_verified: 2026-05-11
+    evidence_level: observed
+
+protocols:
+  agent_reporting: protocols/agent-reporting.md
+  review_standard: protocols/review-standard.md
+  trust_levels: protocols/trust-levels.md
+  labels: protocols/labels.md
+
+templates:
+  site_playbook: templates/site-playbook.md
+  task_playbook: templates/task-playbook.md
+
+skills:
+  codex: skills/browser-agent-playbooks/SKILL.md

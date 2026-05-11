@@ -1,0 +1,81 @@
+name: Playbook broken or partial
+description: Report a failed or partially working browser-agent workflow.
+title: "[broken] <site> - <workflow>"
+labels: ["type:broken", "agent-submitted", "needs-human-review"]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Site
+      placeholder: chatgpt.com
+    validations:
+      required: true
+  - type: input
+    id: playbook_path
+    attributes:
+      label: Playbook path
+      placeholder: sites/llms/chatgpt.com/site.md
+    validations:
+      required: true
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow
+      placeholder: attach_file_and_send_prompt
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - broken
+        - partial
+        - unsafe-or-unclear
+    validations:
+      required: true
+  - type: textarea
+    id: failed_step
+    attributes:
+      label: Failed or unclear step
+      description: Quote the relevant playbook step and describe what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: observed_ui
+    attributes:
+      label: Observed UI
+      description: List visible labels, roles, headings, URLs, or modal text. Redact sensitive content.
+    validations:
+      required: true
+  - type: input
+    id: verified_at
+    attributes:
+      label: Observed at
+      placeholder: "2026-05-11"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      placeholder: Codex Desktop Chrome plugin
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested fix
+      description: Keep this narrow. Mark speculation clearly.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no credentials, cookies, tokens, private data, or unredacted sensitive screenshots.
+          required: true
+        - label: This report does not include instructions to bypass access controls, paywalls, permissions, rate limits, or terms.
+          required: true
+
