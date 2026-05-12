@@ -12,8 +12,8 @@ sites:
   - domain: chatgpt.com
     category: llms
     playbook: sites/llms/chatgpt.com/site.md
-    last_verified: 2026-05-11
-    evidence_level: observed
+    last_verified: 2026-05-12
+    evidence_level: tested
   - domain: linkedin.com
     category: social-media
     playbook: sites/social-media/linkedin.com/site.md
