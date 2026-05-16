@@ -11,6 +11,13 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 - Admin dashboards
 - Analytics tools
 
+## Current Playbooks
+
+| Site | Playbook | Evidence |
+| --- | --- | --- |
+| GitHub | `sites/tools/github.com/site.md` | Partial, account-specific repository creation and metadata workflow |
+| Hawk Host | `sites/tools/hawkhost.com/site.md` | Tested, account-specific cPanel File Manager static-site edit workflow |
+
 ## Useful Workflow Types
 
 - Search records visible to the signed-in user

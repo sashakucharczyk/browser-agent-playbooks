@@ -19,6 +19,26 @@ sites:
     playbook: sites/social-media/linkedin.com/site.md
     last_verified: 2026-05-11
     evidence_level: observed
+  - domain: github.com
+    category: tools
+    playbook: sites/tools/github.com/site.md
+    last_verified: 2026-05-12
+    evidence_level: partial
+  - domain: hawkhost.com
+    category: tools
+    playbook: sites/tools/hawkhost.com/site.md
+    last_verified: 2026-05-11
+    evidence_level: tested
+
+tasks:
+  - name: create-public-repo-from-local-seed
+    playbook: tasks/create-public-repo-from-local-seed/task.md
+    last_verified: 2026-05-12
+    evidence_level: partial
+  - name: open-pull-request-from-pushed-branch
+    playbook: tasks/open-pull-request-from-pushed-branch/task.md
+    last_verified: 2026-05-15
+    evidence_level: partial
 
 protocols:
   agent_reporting: protocols/agent-reporting.md
@@ -32,3 +52,4 @@ templates:
 
 skills:
   codex: skills/browser-agent-playbooks/SKILL.md
+  browser_playbook_check: skills/browser-playbook-check/SKILL.md

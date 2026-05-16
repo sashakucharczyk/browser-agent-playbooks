@@ -74,4 +74,7 @@ See `protocols/agent-reporting.md`, `protocols/review-standard.md`, and `protoco
 
 ## Codex Skill
 
-The repo includes a Codex skill at `skills/browser-agent-playbooks/SKILL.md`. It instructs Codex-like agents to use the playbooks, report field evidence, and review proposed improvements for contextual correctness, privacy, security, and consent risks.
+The repo includes Codex skills under `skills/`:
+
+- `skills/browser-agent-playbooks/SKILL.md` instructs agents to use the playbooks, report field evidence, and review proposed improvements for contextual correctness, privacy, security, and consent risks.
+- `skills/browser-playbook-check/SKILL.md` is a lightweight browser-start check. It tells agents to look for relevant playbooks when a website workflow is not obvious, leave a `+1 worked` report when an existing playbook helps, and use the reporting workflow after the task when a playbook is missing or wrong.

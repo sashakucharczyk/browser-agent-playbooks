@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Playbook Check"
+  short_description: "Check browser playbooks before and after web work."
+  default_prompt: "Use $browser-playbook-check before browser work to find relevant playbooks and report what helped."
