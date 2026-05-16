@@ -7,7 +7,7 @@
 - Primary entry point: `https://github.com/`
 - Last verified: `2026-05-15`
 - Verified with: Codex Desktop Chrome plugin controlling a signed-in Chrome session, plus local PowerShell/Git fallback
-- Verification depth: Public repository creation, empty-repo quick setup, repository metadata editing, topic entry, local push verification, repository file visibility, pull request creation from a pushed branch, and draft conversion were partially tested.
+- Verification depth: Public repository creation, empty-repo quick setup, repository metadata editing, topic entry, local push verification, repository file visibility, pull request creation from a pushed branch, draft conversion, and PR title/body editing were partially tested.
 - Evidence level: `partial`, `account-specific`
 
 ## What This Playbook Helps With
@@ -76,6 +76,26 @@ Completion signals:
 - The PR page shows the expected title, base branch, compare branch, commit count, and changed file count.
 - For a draft PR, the page shows `Draft`, `Not ready`, or `Ready for review`, and `Ready to merge` is no longer the main state.
 
+### Update A Pull Request Title Or Body
+
+1. Prefer the GitHub connector or CLI for PR metadata updates when it has write permission.
+2. If connector PR update fails with `Resource not accessible by integration`, use the signed-in browser UI.
+3. Open the PR page.
+4. To edit the title:
+   - click `Edit title`
+   - fill textbox `Edit Pull Request Title`
+   - click `Save`
+5. To edit the PR body:
+   - open the first comment's `Show options` menu
+   - choose `Edit comment`
+   - fill textbox `Comment body`
+   - click `Update comment`
+
+Completion signals:
+
+- The PR heading reflects the new title.
+- The first conversation comment shows the new body and an `edited` marker.
+
 ## Useful UI Anchors
 
 | Area | Anchor | Notes |
@@ -95,6 +115,9 @@ Completion signals:
 | PR create | button `Create pull request` | Opens the PR. Requires confirmation or an explicit user request. |
 | Draft conversion | area `Still in progress?` and button `Convert to draft` | Opens a confirmation dialog before changing PR state. |
 | Draft confirmation | dialog `Convert this pull request to draft?` | Confirm with the dialog's `Convert to draft` button. |
+| PR title edit | button `Edit title`, textbox `Edit Pull Request Title`, button `Save` | Updates the visible PR heading. |
+| PR body menu | first comment button `Show options`, menu item `Edit comment` | Opens the original PR body editor. |
+| PR body edit | textbox `Comment body`, button `Update comment` | Updates the original PR description/comment. |
 
 ## Known States And Interruptions
 
@@ -106,7 +129,7 @@ Completion signals:
 | Topic entry clipboard failure | Browser automation reports that virtual clipboard is unavailable. | Focus the topics combobox and type topics character by character. |
 | Topic suggestions block saving | Suggestions/dropdown remain open after typing. | Press Escape, then click `Save changes`. |
 | Save changes timeout | Save appears to stall or click times out. | Re-check whether metadata already updated; if not, close suggestions and retry deliberately. |
-| Connector can read but not write | GitHub connector can search or read issues but PR creation returns `Resource not accessible by integration`. | Keep read operations connector-first, then use signed-in Chrome for the blocked write action. |
+| Connector can read but not write | GitHub connector can search or read issues but PR creation or PR metadata update returns `Resource not accessible by integration`. | Keep read operations connector-first, then use signed-in Chrome for the blocked write action. |
 | PR created as ready instead of draft | Compare page creates a normal open PR even when draft was intended. | Use `Convert to draft` and confirm the modal; verify `Draft` or `Not ready` appears. |
 | Body textarea lacks stable name | The PR body field appears under `Add a description` but exposes no useful accessible textbox name. | Use the visible heading for orientation and a narrow textarea fallback only after confirming there are just the expected title/body fields. |
 | Local Git dubious ownership | Git reports `detected dubious ownership` for the working copy. | Use a narrow safe.directory override for that repo path instead of broad global trust. |
