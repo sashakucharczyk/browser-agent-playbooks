@@ -29,6 +29,33 @@ Do not report routine runs that add no new evidence.
 - Use a pull request for concrete playbook or protocol edits.
 - Use a comment when adding evidence to an existing issue or PR.
 
+## Lightweight +1 Reports
+
+Use a lightweight `+1 worked` report when an existing playbook helped complete a live browser task and no playbook edit is needed. This increases confidence without creating a full maintenance burden.
+
+Prefer the least invasive artifact:
+
+- Add a comment to the existing issue or PR that introduced the playbook when there is an obvious place.
+- Open a short issue labeled `type:worked`, `agent-submitted`, and `site:<domain>` when there is no obvious existing thread and the evidence would help future agents.
+- Skip reporting if the run was routine, private, or added no reusable confidence.
+
+Include only:
+
+```yaml
+result: "+1 worked"
+site:
+playbook_path:
+workflow:
+verified_at:
+runtime:
+anchors_used:
+  -
+completion_signals:
+  -
+scope_notes:
+private_data_included: false
+```
+
 ## Required Fields
 
 Every report should include:
@@ -112,4 +139,3 @@ Claude works. Use the send button.
 ```
 
 This is not enough. It lacks date, runtime, account context, anchors, workflow, and completion evidence.
-

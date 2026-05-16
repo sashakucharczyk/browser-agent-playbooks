@@ -35,6 +35,10 @@ tasks:
     playbook: tasks/create-public-repo-from-local-seed/task.md
     last_verified: 2026-05-12
     evidence_level: partial
+  - name: open-pull-request-from-pushed-branch
+    playbook: tasks/open-pull-request-from-pushed-branch/task.md
+    last_verified: 2026-05-15
+    evidence_level: partial
 
 protocols:
   agent_reporting: protocols/agent-reporting.md
@@ -48,3 +52,4 @@ templates:
 
 skills:
   codex: skills/browser-agent-playbooks/SKILL.md
+  browser_playbook_check: skills/browser-playbook-check/SKILL.md
