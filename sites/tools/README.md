@@ -15,8 +15,11 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 
 | Site | Playbook | Evidence |
 | --- | --- | --- |
+| Dropbox | `sites/tools/dropbox.com/site.md` | Tested, account-specific dummy folder and file-request discovery workflow |
+| Figma | `sites/tools/figma.com/site.md` | Partial, account-specific design-file workflow blocked by first-run terms gate before frame creation |
 | GitHub | `sites/tools/github.com/site.md` | Partial, account-specific repository creation and metadata workflow |
 | Hawk Host | `sites/tools/hawkhost.com/site.md` | Tested, account-specific cPanel File Manager static-site edit workflow |
+| Zoom | `sites/tools/zoom.us/site.md` | Tested, account-specific schedule-meeting security controls workflow |
 
 ## Useful Workflow Types
 
