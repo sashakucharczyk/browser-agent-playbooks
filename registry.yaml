@@ -33,7 +33,7 @@ sites:
     category: tools
     playbook: sites/tools/figma.com/site.md
     last_verified: 2026-05-19
-    evidence_level: partial
+    evidence_level: tested
   - domain: dropbox.com
     category: tools
     playbook: sites/tools/dropbox.com/site.md
