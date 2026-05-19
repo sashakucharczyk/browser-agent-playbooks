@@ -15,6 +15,7 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 
 | Site | Playbook | Evidence |
 | --- | --- | --- |
+| Canva | `sites/tools/canva.com/site.md` | Tested, account-specific template-based design and PDF export discovery workflow |
 | GitHub | `sites/tools/github.com/site.md` | Partial, account-specific repository creation and metadata workflow |
 | Hawk Host | `sites/tools/hawkhost.com/site.md` | Tested, account-specific cPanel File Manager static-site edit workflow |
 
