@@ -41,6 +41,10 @@ Steps:
 9. Use the default rule shape when available: `Where` -> `Name` -> `Contains` -> `Value`.
 10. Fill the filter value.
 
+Alternate filter entry state:
+
+- If `Filter` is not visible on the database toolbar, click `Settings` / `View settings`, choose `Filter`, then click `Add advanced filter`.
+
 Completion signals:
 
 - The page title changes to the chosen test title.
@@ -64,6 +68,7 @@ Expected output location:
 | Database template | `Empty database` | Creates a simple database without template-specific fields. |
 | View name | `Table` | Default database view after creating an empty database. |
 | Filter control | button `Filter` | Opens the filter controls for the current database view. |
+| View settings | button `Settings` / text `View settings` | In some account states, `Filter` is inside view settings rather than directly visible on the toolbar. |
 | Filter creation | `Add advanced filter` | Creates the first visible rule in the filter popover. |
 | Default property | `Name` | Default title property for an empty database. |
 | Default operator | `Contains` | Observed default operator for the `Name` text property. |
@@ -76,6 +81,7 @@ Expected output location:
 | Login required | Notion marketing page, login page, or account picker appears instead of workspace/sidebar. | Stop and ask the user to sign in with the intended account. |
 | Existing page selected | The browser opens the most recent Notion page instead of a dashboard. | Use `https://www.notion.so/new` for a fresh private page. |
 | Starter tiles not visible | Page title exists but starter options are hidden below or delayed. | Wait briefly, then use visible text `Database` if present. |
+| Filter hidden in toolbar | The database table loads, but only `Settings` is visible near the view controls. | Open `Settings` / `View settings`, then choose `Filter` and `Add advanced filter`. |
 | Filter popover already open or stale | `Filter`, `1 rule`, or rule fields appear together. | Re-check visible filter state before clicking again. |
 | Workspace-specific sidebar | Sidebar items vary by account, plan, or templates. | Use the route and visible page controls rather than assuming sidebar order. |
 

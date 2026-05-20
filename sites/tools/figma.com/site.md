@@ -41,6 +41,10 @@ Steps:
 9. Confirm `Share` is visible, but do not open sharing or invite controls.
 10. Confirm the right sidebar exposes `Export` for the selected frame/object, but do not add export settings or download unless explicitly approved.
 
+Alternate second-run frame state:
+
+- If first-run setup and the `What do you want to make today?` prompt no longer appear, use the editor `Frame` tool, expand `Desktop`, and choose a preset such as `Desktop 1440 x 1024`. Confirm a frame-backed layer such as `Desktop - 1` appears before checking `Export`.
+
 Completion signals:
 
 - A Figma design editor opens at a `/design/<file-id>/...` URL.
@@ -63,6 +67,7 @@ Expected output location:
 | Direct route | `https://www.figma.com/design/new` | Tested fallback when the file-browser button did not open a file. |
 | Editor URL | `/design/<file-id>/Untitled` | Confirms a design file exists. |
 | Editor toolbar | `Frame` | Frame tool anchor; shortcut `F` may expose frame presets. |
+| Frame preset | `Desktop 1440 x 1024` | Useful when onboarding no longer offers `Desktop app`; creates a `Desktop - 1` frame-backed layer. |
 | Starter prompt | `What do you want to make today?` | Appears after first-run onboarding. |
 | Starter frame | `Desktop app` | Tested path that creates multiple frame-backed starter layers. |
 | Top-right action | `Share` | Do not invite, copy public links, or change access without approval. |
@@ -76,6 +81,7 @@ Expected output location:
 | New-design button does nothing | `New Design file` is visible but the page stays on the file browser. | Try `https://www.figma.com/design/new`. |
 | Frame presets visible | Right sidebar lists device presets such as `iPhone`, `Android`, `Tablet`, `Desktop`, `Paper`, or `Social media`. | This indicates the frame tool is active, but not that a frame has been created. Confirm the layer or canvas state before claiming success. |
 | Starter frame prompt | `What do you want to make today?` with `Website`, `Mobile app`, or `Desktop app`. | Clicking `Desktop app` created multiple starter frames in the tested run. |
+| No starter prompt on second run | A blank Untitled design opens with `Frame`, `Share`, and right-sidebar controls, but no frame-backed layer yet. | Use `Frame` -> `Desktop` -> `Desktop 1440 x 1024`, then confirm `Desktop - 1` in Layers and `Export` in the right sidebar. |
 | Export hidden | `Export` is not visible while frame presets are open or no object is selected. | Select the frame/object after creation; do not export without approval. |
 
 ## Boundaries

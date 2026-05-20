@@ -29,6 +29,26 @@ sites:
     playbook: sites/tools/hawkhost.com/site.md
     last_verified: 2026-05-11
     evidence_level: tested
+  - domain: tally.so
+    category: tools
+    playbook: sites/tools/tally.so/site.md
+    last_verified: 2026-05-20
+    evidence_level: tested
+  - domain: pitch.com
+    category: tools
+    playbook: sites/tools/pitch.com/site.md
+    last_verified: 2026-05-20
+    evidence_level: tested
+  - domain: fillout.com
+    category: tools
+    playbook: sites/tools/fillout.com/site.md
+    last_verified: 2026-05-20
+    evidence_level: tested
+  - domain: whimsical.com
+    category: tools
+    playbook: sites/tools/whimsical.com/site.md
+    last_verified: 2026-05-20
+    evidence_level: tested
   - domain: canva.com
     category: tools
     playbook: sites/tools/canva.com/site.md
