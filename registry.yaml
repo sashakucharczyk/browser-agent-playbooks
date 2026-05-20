@@ -44,6 +44,11 @@ sites:
     playbook: sites/tools/zoom.us/site.md
     last_verified: 2026-05-19
     evidence_level: tested
+  - domain: notion.so
+    category: tools
+    playbook: sites/tools/notion.so/site.md
+    last_verified: 2026-05-19
+    evidence_level: tested
 
 tasks:
   - name: create-public-repo-from-local-seed

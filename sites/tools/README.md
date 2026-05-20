@@ -19,6 +19,7 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 | Figma | `sites/tools/figma.com/site.md` | Tested, account-specific design-file workflow with first-run setup, Starter plan, and Desktop app starter frames |
 | GitHub | `sites/tools/github.com/site.md` | Partial, account-specific repository creation and metadata workflow |
 | Hawk Host | `sites/tools/hawkhost.com/site.md` | Tested, account-specific cPanel File Manager static-site edit workflow |
+| Notion | `sites/tools/notion.so/site.md` | Tested, account-specific private database page and filter workflow |
 | Zoom | `sites/tools/zoom.us/site.md` | Tested, account-specific schedule-meeting security controls workflow |
 
 ## Useful Workflow Types
