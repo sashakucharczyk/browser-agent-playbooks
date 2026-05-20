@@ -29,6 +29,11 @@ sites:
     playbook: sites/tools/hawkhost.com/site.md
     last_verified: 2026-05-11
     evidence_level: tested
+  - domain: canva.com
+    category: tools
+    playbook: sites/tools/canva.com/site.md
+    last_verified: 2026-05-19
+    evidence_level: tested
   - domain: figma.com
     category: tools
     playbook: sites/tools/figma.com/site.md
