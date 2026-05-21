@@ -15,7 +15,7 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 
 | Site | Playbook | Evidence |
 | --- | --- | --- |
-| Canva | `sites/tools/canva.com/site.md` | Tested, account-specific template-based design and PDF export discovery workflow |
+| Canva | `sites/tools/canva.com/site.md` | Tested, account-specific template-based design, custom-size one-pager, clipboard image paste, and PDF export discovery workflows |
 | Dropbox | `sites/tools/dropbox.com/site.md` | Tested, account-specific dummy folder and file-request discovery workflow |
 | Figma | `sites/tools/figma.com/site.md` | Tested, account-specific design-file workflow with first-run setup, Starter plan, and Desktop app starter frames |
 | Fillout | `sites/tools/fillout.com/site.md` | Tested, account-specific form field workflow with publish-gated share/embed controls |
