@@ -98,12 +98,12 @@ Observed menu items:
 
 ### Send A Connection Request With A Note (observed 2026-10-02)
 
-Some profiles show only Follow in the top card. Connect is often still available under More: open More, then choose "Invite <name> to connect".
-The first click on More after a page load often does not open the menu. If nothing appears, click again, and wait for the menu before concluding Connect is missing.
-Choose "Add a note". Notes must be under 300 characters.
-Done when the profile shows Pending and an "Invitation sent" confirmation.
-Pace: about 10 requests a day, spaced through the day. No warnings or limits seen at that pace on a Premium account.
-Boundary: only send text the user approved for that exact message.
+- Some profiles show only Follow in the top card. Connect is often still available under More: open More, then choose "Invite <name> to connect".
+- The first click on More after a page load often does not open the menu. If nothing appears, click again, and wait for the menu before concluding Connect is missing.
+- Choose "Add a note". Notes must be under 300 characters.
+- Done when the profile shows Pending and an "Invitation sent" confirmation.
+- Pace: about 10 requests a day, spaced through the day. No warnings or limits seen at that pace on a Premium account.
+- Boundary: only send text the user approved for that exact message.
 
 ## Known States And Interruptions
 
