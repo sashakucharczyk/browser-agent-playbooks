@@ -17,7 +17,7 @@ sites:
   - domain: linkedin.com
     category: social-media
     playbook: sites/social-media/linkedin.com/site.md
-    last_verified: 2026-05-11
+    last_verified: 2026-10-02
     evidence_level: observed
   - domain: github.com
     category: tools
