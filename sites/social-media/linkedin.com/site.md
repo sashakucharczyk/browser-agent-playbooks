@@ -5,9 +5,10 @@
 - Site: `linkedin.com`
 - Category: `social-media`
 - Primary entry point: `https://www.linkedin.com/feed/`
-- Last verified: `2026-05-11`
+- Last verified: `2026-10-02`
 - Verified with: Codex Chrome plugin controlling a signed-in Chrome session
 - Verification depth: Feed page, global navigation, search box, feed controls, sort menu, and account menu were observed. No posts, messages, reactions, or profile changes were submitted.
+  - 2026-10-02: Connect-with-note flow observed on live profiles via a signed-in browser session.
 
 ## What This Playbook Helps With
 
@@ -95,6 +96,15 @@ Observed menu items:
 3. Enter content only after the user has approved the draft text.
 4. Stop before clicking any publish/post button and ask for final confirmation.
 
+### Send A Connection Request With A Note (observed 2026-10-02)
+
+Some profiles show only Follow in the top card. Connect is often still available under More: open More, then choose "Invite <name> to connect".
+The first click on More after a page load often does not open the menu. If nothing appears, click again, and wait for the menu before concluding Connect is missing.
+Choose "Add a note". Notes must be under 300 characters.
+Done when the profile shows Pending and an "Invitation sent" confirmation.
+Pace: about 10 requests a day, spaced through the day. No warnings or limits seen at that pace on a Premium account.
+Boundary: only send text the user approved for that exact message.
+
 ## Known States And Interruptions
 
 | State | How it appears | Suggested handling |
@@ -105,6 +115,7 @@ Observed menu items:
 | Feed changes while reading | Posts reorder or refresh. | Capture URLs/profile links as soon as relevant. |
 | External link warning | LinkedIn safety/go redirect. | Do not continue off-site unless requested. |
 | Messaging composer | Messaging page or send/share modal. | Stop before sending text or attachments. |
+| Follow-only top card | Top card shows Follow but no Connect. | Open More and look for `Invite <name> to connect`; click More twice if the menu does not open. |
 
 ## Boundaries
 
