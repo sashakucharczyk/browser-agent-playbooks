@@ -15,6 +15,7 @@ Playbooks for SaaS and work tools where browser access may be more practical tha
 
 | Site | Playbook | Evidence |
 | --- | --- | --- |
+| BakedBrie | `sites/tools/bakedbrie.com/site.md` | Partial, account-specific browser workflows (cards, comments, moving, columns, notifications) from one signed-in session with test cards; API notes from docs only |
 | Canva | `sites/tools/canva.com/site.md` | Tested, account-specific template-based design, custom-size one-pager, clipboard image paste, and PDF export discovery workflows |
 | Dropbox | `sites/tools/dropbox.com/site.md` | Tested, account-specific dummy folder and file-request discovery workflow |
 | Figma | `sites/tools/figma.com/site.md` | Tested, account-specific design-file workflow with first-run setup, Starter plan, and Desktop app starter frames |

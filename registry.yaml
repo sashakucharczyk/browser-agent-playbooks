@@ -24,6 +24,11 @@ sites:
     playbook: sites/tools/github.com/site.md
     last_verified: 2026-05-12
     evidence_level: partial
+  - domain: bakedbrie.com
+    category: tools
+    playbook: sites/tools/bakedbrie.com/site.md
+    last_verified: 2026-10-03
+    evidence_level: partial
   - domain: hawkhost.com
     category: tools
     playbook: sites/tools/hawkhost.com/site.md
